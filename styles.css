@@ -1,0 +1,287 @@
+/* *{
+    outline: 2px solid red;
+} */
+
+body{
+    margin: 0px;
+    font-family: 'Inter',sans-serif;
+}
+
+.container{
+    height: 1000px;
+    width: 700px;
+    border: 1px solid black;
+    margin: 0 auto;
+}
+
+.header{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.link {
+    margin: 5px;
+    position: relative;
+    font-family: "Inter";
+    font-weight: 500;
+    font-size: 12px;
+
+    background-color:#dfdfdf;
+	border-radius: 40px;
+
+	cursor:pointer;
+	color:#000000;
+	padding: 8px 18px;
+    text-decoration: none;
+    
+}
+
+.link:hover {
+	background-color:#aeaeae;
+}
+.link:active {
+	position:relative;
+	top:1px;
+}
+
+.header-middle{
+    margin: 20px;
+    padding: 20px;
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+}
+
+.header-right-all-container{
+    display: flex;
+    flex-direction: row;
+}
+
+.header-right-container{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.header-right{
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.header-cloud{
+    display: inline-block;
+}
+
+/* --- MIDDLE ELEMENTS */
+
+
+
+.portfolio-title-container{
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio-text{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.title-container{
+    display: flex;
+    flex-direction: row;
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    width: 650px;
+}
+
+.title-text-container{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.title-text{
+    font-size: 35px;
+    font-weight: 700;
+    padding: 20px;
+}
+
+.title-image{
+    margin: 5px;
+    padding: 15px;
+}
+
+.middle-image{
+    display: inline-block;
+}
+
+.specials-container{
+    margin-left: -18px;
+    display: flex;
+    flex-direction: row;
+}
+
+.specials-buttons {
+    font-weight: bold;
+
+	cursor:pointer;
+	color:#000000;
+	font-size:17px;
+	padding: 8px 18px;
+    text-decoration: none;
+    
+}
+
+.specials-buttons:hover {
+	color:rgb(200, 179, 152);
+}
+.specials-buttons:active {
+	position:relative;
+	top:1px;
+}
+
+.specials{
+    font-size: 20px;
+    padding: 20px;
+    margin: 5px;
+    margin-top: -25px;
+}
+
+/* ----- ABOUT ---- */
+.about-texts-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.about-container {
+    border: 1px solid rgb(221, 221, 221);
+    border-radius: 15px;
+    background-color: #dfdfdf;
+    padding: 20px;
+    margin: 0 auto;
+    margin-top: 50px;
+    width: 600px;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: row;
+}
+
+.about-title{
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+.about-text{
+    font-size: 12px;
+    padding-top: 20px;
+}
+
+/* BOTTOM CONTAINER */
+
+.bottom-text{
+    font-size: 12px;
+}
+
+.bottom-image{
+    display: block;
+    margin: auto;
+    margin-left: 0;
+}
+
+.bottom-container{
+    margin: 0 auto;
+    margin-top: 40px;
+    /* border: 1px solid black; */
+    padding: 20px;
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.bottom-texts-container{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-left: -15px;
+}
+
+.bottom-title{
+    font-weight: bold;
+    font-style: italic;
+    font-size: 20px;
+}
+
+.nutrition-menu-container{
+    border: 1px solid rgb(200, 179, 152);
+    border-radius: 10px;
+    border-width: 2px;
+    display: flex;
+    flex-direction: row; 
+}
+
+.nutrition-menu{
+    border: 1px solid rgb(200, 179, 152);
+    background-color: rgb(200, 179, 152);
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+    padding: 1px;
+}
+
+.nutrition-menu-text{
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0 auto;
+    padding: 15px 10px;
+}
+
+.nutrition-menu:hover{
+    background-color: rgb(151, 137, 120);
+    cursor: pointer;
+}
+
+.nutrition-menu:active{
+    position: relative;
+    top: 1px;
+}
+
+.pages-container{
+    margin: 0 auto;
+    margin-top: 50px;
+    width: fit-content;
+    /* border: 1px solid black; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.page-button{
+    background-color: rgb(230, 230, 230);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+}
+
+.page-button-text{
+    font-size: 12px;
+    font-weight: bold;
+    margin: auto;
+}
+
+.page-button:hover{
+    cursor:pointer;
+    background-color: rgb(200, 179, 152);
+}
