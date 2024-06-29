@@ -1,0 +1,157 @@
+/* *{
+    outline: 2px solid red;
+} */
+
+body{
+    margin: 0px;
+    font-family: 'Inter',sans-serif;
+}
+
+.container{
+    height: 1000px;
+    width: 700px;
+    border: 1px solid black;
+    margin: 0 auto;
+    background-color: antiquewhite;
+}
+
+.projects-title-container, .experience-title{
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    margin-top: 30px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.projects-text, .experience-title{
+    font-size: 30px;
+    font-family: "Cedarville Cursive",cursive;
+    font-weight: bold;
+}
+
+.experience-title{
+    margin-top: -30px;
+}
+
+.projects-container, .experience-container{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+    /* border: 1px solid black; */
+    justify-content: space-between;
+}
+
+.experience-container{
+    flex-direction: column;
+}
+
+.project{
+    /* border: 1px solid black; */
+    margin: 10px;
+    padding: 5px;
+    height: fit-content;
+}
+
+.project-headline{
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.project-description{
+    font-size: 12px;
+}
+
+.project-skills{
+    background-color: rgb(230, 230, 230);
+    border: 1px solid rgb(230, 230, 230);
+    border-radius: 20px;
+    padding: 5px 12px;
+    margin: 10px;
+    margin-left: -1px;
+}
+
+.project-skills-text{
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+    
+}
+
+.project-skills-container{
+    display: flex;
+    flex-direction: row;
+}
+.projects-right-container, projects-left-container{
+    display: flex;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.pancakes-photo{
+    display: block;
+    margin: 0 auto;
+}
+
+/* --------- EXPERIENCE ---------- */
+
+/*<div class="experience-container">
+            <div class="experience-title">EXPERIENCES</div>
+            <div class="experience-cards-container">
+                <div class="experience-card">
+                    <div class="experience-headline">
+                        <div class="experience-description">*/
+
+.experience-cards-container{
+    /* border: 1px solid rgb(0, 0, 0); */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-end;
+    margin-top: 90px;
+}
+
+.experience-card-a{
+    display: flex;
+    border: 1px solid rgb(232, 213, 187);
+    background-color: rgb(232, 213, 187);
+    height: 200px;
+    width: 250px;
+    margin: 10px;
+    position: relative;
+    align-items: flex-end;
+    
+}
+
+.experience-card-b{
+    display: flex;
+    border: 1px solid rgb(200, 179, 152);
+    background-color: rgb(200, 179, 152);
+    
+    height: 250px;
+    width: 250px;
+    margin: 10px;
+    position: relative;
+    align-items: flex-end;
+}
+
+.experience-headline{
+    font-size: 20px;
+    font-weight: bold;
+    margin: 15px;
+}
+
+.image-a{
+    position: absolute;
+    top: -80px;
+    left: 40px;
+}
+
+.image-c{
+    position: absolute;
+    transform: rotate(90deg);
+    top: 60px;
+    left: 190px;
+}

@@ -1,0 +1,35 @@
+.activities-title-container{
+    /* border: 1px solid black; */
+    margin: 0 auto;
+    margin-bottom: 30px;
+    margin-top: 30px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.activities-text{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.activities-container{
+    border: 3px solid rgb(222, 211, 186);
+    height: 800px;
+    width: 600px;
+    margin: 0 auto;
+}
+
+.activities-headline{
+    font-size: 20px;
+    font-weight: bold;
+    color: black;
+}
+
+.activities-images-container{
+    border: 1px solid rgb(222, 211, 186);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
