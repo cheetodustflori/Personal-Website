@@ -1,35 +1,147 @@
-.activities-title-container{
-    /* border: 1px solid black; */
-    margin: 0 auto;
-    margin-bottom: 30px;
-    margin-top: 30px;
-    width: 500px;
+* {
+  /* border: 1px solid black; */
+}
+
+.activities-title-container {
+  /* border: 1px solid black; */
+  margin: 0 auto;
+  margin-bottom: 30px;
+  margin-top: 30px;
+  width: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.activities-text {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: "Cedarville Cursive", cursive;
+}
+
+.activity-headline {
+  font-size: 20px;
+  color: black;
+  top: 0px;
+}
+
+/* MIDDLE ROW */
+
+.middle-container {
+  display: flex;
+  flex-direction: row;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+/* .big-photo{
+} */
+
+.middle-photo {
+  /* border: 5px solid #D3D4C8; */
+  margin: 5px;
+  filter: saturate(0%);
+}
+
+.first-column{
+    margin: 5px;
+}
+
+.second-column{
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.third-column{
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+}
+
+.middle-text{
+    font-style: italic;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* BOTTOM CONTENT */
+
+/* <div class="bottom-container">
+        <div class="bottom-container-header">Happy to contribute to these communities</div>
+        <div class="activities-container">
+          <div class="activity-headline">THE LEAF PROJECT<span style="font-weight:bold"><br/>FRONT END DEVELOPER</span></div>
+          <div class="activity-description">this is what i did for this club. blah lbah blah.</div>
+        </div>
+
+        <div class="activities-container">
+          <div class="activity-headline">ACM<span style="font-weight:bold"><br/>TREASURER</span></div>
+          <div class="activity-description">this is what i did for this club. blah lbah blah.</div>
+        </div>
+
+        <div class="activities-container">
+          <div class="activity-headline">WICS<span style="font-weight:bold"><br/>DEV LEAD</span></div>
+          <div class="activity-description">this is what i did for this club. blah lbah blah.</div>
+        </div> */
+
+.bottom-container{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0px;
+    bottom: -100px;
+    height: 500px;
+    width: 700px;
+    background-color: #D3D4C8;
     align-items: center;
 }
 
-.activities-text{
-    font-size: 30px;
+.bottom-container-header{
+    padding: 5px;
+    margin: 0;
+    position: absolute;
+    top: -35px;
+    left: px;
     font-weight: bold;
+    font-size: 20px;
+}
+
+.bottom-container-image{
+    position: absolute;
+    top: -50px;
+    margin: 5px;
+    left: 0px;
+}
+
+.all-activities-container{
+    display: flex;
+    flex-direction: row;
+    position: relative;
+    margin: 0;
+    justify-content: center;
+    align-items:start;
+    height: fit-content;
+    width: 500px;
+    /* border: 1px solid red; */
+    top: 30px;
+    
 }
 
 .activities-container{
-    border: 3px solid rgb(222, 211, 186);
-    height: 800px;
-    width: 600px;
-    margin: 0 auto;
-}
-
-.activities-headline{
-    font-size: 20px;
-    font-weight: bold;
-    color: black;
-}
-
-.activities-images-container{
-    border: 1px solid rgb(222, 211, 186);
-    margin: 0 auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 0px;
+    
+    margin: 5px;
+}
+
+.activity-description{
+  margin-top: 5px;
+  display: flex;
+  align-self: flex-end;
+  font-size: 14px;
+  padding: 0px;
+  bottom: 0px;
+  
 }

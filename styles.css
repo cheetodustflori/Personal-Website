@@ -16,7 +16,7 @@ body{
     margin: 0 auto;
     margin-top: 30px;
     margin-bottom: 30px;
-    background-color: rgb(255, 249, 242);
+    background-color: #fff9f2;
 }
 
 .line-container{
@@ -25,14 +25,14 @@ body{
 }
 
 .hr-left{
-    height: 2px;
+    height: 1px;
     width: 100px;
     background-color: black;
     transform: translate(90%,270%);
 }
 
 .hr-right{
-    height: 2px;
+    height: 1px;
     width: 100px;
     background-color: black;
     transform: translate(-90%,270%);
@@ -40,7 +40,7 @@ body{
 }
 
 .hr-bottom {
-    height: 2px;
+    height: 1px;
     width: 400px;
     background-color: black;
 }
@@ -60,7 +60,7 @@ body{
     font-weight: 500;
     font-size: 12px;
 
-    background-color:#ffffff;
+    background-color:#D3D4C8;
 	border-radius: 40px;
 
 	cursor:pointer;
@@ -171,7 +171,7 @@ body{
 }
 
 .specials-buttons:hover {
-	color:rgb(200, 179, 152);
+	color:#C0A888;
 }
 .specials-buttons:active {
 	position:relative;
@@ -192,13 +192,13 @@ body{
 }
 
 .about-container {
-    border: 1px solid #ffffff;
+    border: 1px solid #D3D4C8;
     border-radius: 15px;
-    background-color: #ffffff;
+    background-color: #D3D4C8;
     padding: 20px;
     margin: 0 auto;
     margin-top: 50px;
-    width: 600px;
+    width: 500px;
     justify-content: space-between;
     display: flex;
     flex-direction: row;
@@ -220,7 +220,7 @@ body{
 }
 
 .read-more:hover{
-    color: rgb(200, 179, 152);
+    color: #C0A888;
 }
 
 /* BOTTOM CONTAINER */
@@ -262,7 +262,8 @@ body{
 }
 
 .nutrition-menu-container{
-    border: 1px solid rgb(200, 179, 152);
+    border: 1px solid #C0A888;
+    background-color: #ffffff;
     border-radius: 10px;
     border-width: 2px;
     display: flex;
@@ -270,8 +271,8 @@ body{
 }
 
 .nutrition-menu{
-    border: 1px solid rgb(200, 179, 152);
-    background-color: rgb(200, 179, 152);
+    border: 1px solid #C0A888;
+    background-color: #C0A888;
     border-radius: 50%;
     height: 50px;
     width: 50px;
@@ -308,7 +309,7 @@ body{
 }
 
 .page-button, .current-button{
-    background-color: rgb(230, 230, 230);
+    background-color: #ffffff;
     border-radius: 50%;
     height: 25px;
     width: 25px;
@@ -318,7 +319,7 @@ body{
 }
 
 .current-button{
-    background-color: rgb(200, 179, 152);
+    background-color: #C0A888;
 }
 
 .page-button-text{
@@ -330,5 +331,5 @@ body{
 
 .page-button:hover{
     cursor:pointer;
-    background-color: rgb(200, 179, 152);
+    background-color: #C0A888;
 }
