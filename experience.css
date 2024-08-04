@@ -12,9 +12,10 @@ body{
     width: 700px;
     border: 1px solid black;
     margin: 0 auto;
+    justify-content: center;
 }
 
-.projects-title-container, .experience-title{
+.experience-title{
     /* border: 1px solid black; */
     margin: 0 auto;
     margin-top: 30px;
@@ -24,7 +25,7 @@ body{
     align-items: center;
 }
 
-.projects-text, .experience-title{
+.experience-title{
     font-size: 30px;
     font-family: "Cedarville Cursive",cursive;
     font-weight: bold;
@@ -34,7 +35,7 @@ body{
     margin-top: -30px;
 }
 
-.projects-container, .experience-container{
+.experience-container{
     display: flex;
     flex-direction: column;
     margin: 10px;
@@ -48,55 +49,7 @@ body{
     flex-direction: column;
 }
 
-.project{
-    /* border: 1px solid black; */
-    margin: 10px;
-    padding: 5px;
-    height: fit-content;
-}
 
-.project-headline{
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    background: none;
-    border: none;
-    padding: 0;
-}
-
-.project-description{
-    font-size: 12px;
-}
-
-.project-skills{
-    background-color: #D3D4C8;
-    border: 1px solid #D3D4C8;
-    border-radius: 20px;
-    padding: 5px 12px;
-    margin: 10px;
-    margin-left: -1px;
-}
-
-.project-skills-text{
-    color: rgb(0, 0, 0);
-    font-size: 12px;
-    
-}
-
-.project-skills-container{
-    display: flex;
-    flex-direction: row;
-}
-.projects-right-container, projects-left-container{
-    display: flex;
-    flex-direction: column;
-    padding: 5px;
-}
-
-.pancakes-photo{
-    display: block;
-    margin: 0 auto;
-}
 
 /* --------- EXPERIENCE ---------- */
 
