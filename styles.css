@@ -1,0 +1,176 @@
+body {
+    background-color: #FFFBF5;
+    font-size: 30px;
+    margin: 15px;
+    padding: 15px;
+    font-family: 'Nanum Pen Script', sans-serif;
+    overflow-y: hidden;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: 10px;
+}
+
+#email, #name{
+    width: fit-content;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+}
+
+#name.active{
+    background-color: #FBE2BD;
+    border-radius: 40px;
+}
+
+#portfolio-title{
+    font-weight: bold;
+    font-size: 45px;
+    cursor: pointer;
+}
+
+.link{
+    font-weight: bold;
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover{
+    color: burlywood;
+}
+
+#projects-container,
+#activities-container,
+#experience-container, 
+#logo-image {
+    display: none;
+}
+
+#viewer-container.active,
+#projects-container.active,
+#activities-container.active,
+#experience-container.active
+{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    height: 525px;
+    width: 1000px;
+    border: 1px solid black;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+#logo-image.active{
+    display: block;
+    margin: 0 auto;
+    width: 700px;
+    margin-top: 15px;
+}
+
+.hidden{
+    display: none;
+}
+
+#lower-nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: bottom;
+    margin-left: 50px;
+    margin-top: 15px;
+}
+
+#name, #name-details {
+    font-size: 45px;
+}
+
+#name-details{
+    padding-left: 15px;
+}
+
+#nav-button-container{
+    display: flex;
+    flex-direction: row;
+}
+
+#nav-button-container > li{
+    margin: 15px;
+    border: none;
+    background: none;
+    font: inherit;
+    padding-left: 15px;
+    padding-right: 15px;
+    list-style-type: none;
+    cursor: pointer;
+}
+
+#nav-button-container > li.active{
+    background-color: #FBE2BD;
+    border-radius: 40px;
+}
+
+/* ----- PROJECTS ------- */
+
+.list > li {
+    list-style-type: none;
+    margin: 15px;
+}
+
+.list > li:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.list > li.active {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.viewer {
+    width: 630px;
+    border: 1px solid black;
+    margin: 15px;
+    display: flex;
+    flex-direction: column;
+}
+
+.viewer-headline {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 15px;
+    align-items: center;
+}
+
+.experience-viewer-headline{
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 45px 0 45px;
+}
+
+.viewer-display {
+    border: 3px solid black;
+    margin: 0 auto;
+    height: 300px;
+    width: 500px;
+}
+
+.viewer-details {
+    position: relative;
+    padding: 15px;
+    text-align: right;
+    margin-right: 50px;
+}
