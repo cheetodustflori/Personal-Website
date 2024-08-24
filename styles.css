@@ -14,7 +14,8 @@ header{
     align-items: center;
     margin-left: 15px;
     margin-right: 15px;
-    margin-top: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 
 #email, #name{
@@ -36,10 +37,14 @@ header{
     font-weight: bold;
     font-size: 45px;
     cursor: pointer;
+    color: #23395B;
+}
+
+.upper-link{
+    font-weight: bold;
 }
 
 .link{
-    font-weight: bold;
     text-decoration: none;
     color: black;
 }
@@ -65,7 +70,7 @@ header{
     flex-direction: row;
     height: 525px;
     width: 1000px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     justify-content: space-between;
     margin-top: 15px;
 }
@@ -73,8 +78,7 @@ header{
 #logo-image.active{
     display: block;
     margin: 0 auto;
-    width: 700px;
-    margin-top: 15px;
+    height: 525px;
 }
 
 .hidden{
@@ -114,15 +118,31 @@ header{
     cursor: pointer;
 }
 
-#nav-button-container > li.active{
-    background-color: #FBE2BD;
+#nav-button-container > li[type="projects"].active{
+    background-color: #7796CB;
+    color: white;
+    border-radius: 40px;
+}
+
+#nav-button-container > li[type="experience"].active{
+    background-color: #576490;
+    color: white;
+    border-radius: 40px;
+}
+
+#nav-button-container > li[type="activities"].active{
+    background-color: #C9CAD9;
     border-radius: 40px;
 }
 
 /* ----- PROJECTS ------- */
 
+.list {
+    margin-top: 100px;
+}
+
 .list > li {
-    list-style-type: none;
+    /* list-style-type: none; */
     margin: 15px;
 }
 
@@ -138,26 +158,27 @@ header{
 
 .viewer {
     width: 630px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
     margin: 15px;
     display: flex;
     flex-direction: column;
 }
 
-.viewer-headline {
+.projects-viewer-headline,
+.activities-viewer-headline {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    padding: 15px;
+    padding: 15px 15px 0 15px;
     align-items: center;
 }
 
 .experience-viewer-headline{
     display: flex;
     flex-direction: row;
-    padding: 15px;
+    padding: 15px 15px 0 15px;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     margin: 0 45px 0 45px;
 }
 
@@ -166,6 +187,7 @@ header{
     margin: 0 auto;
     height: 300px;
     width: 500px;
+    overflow: hidden;
 }
 
 .viewer-details {
