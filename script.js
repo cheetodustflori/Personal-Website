@@ -64,7 +64,7 @@ $("#nav-button-container > li").on("click", function () {
   var buttonType = $(this).attr("type");
   var activeContainer = $("div[type='" + buttonType + "']");
 
-  $("#logo-image").removeClass("active");
+  $("#home-container").removeClass("active");
   $("#nav-button-container > li").removeClass("active");
   $("#name").removeClass("active");
   $(".container").removeClass("active");
@@ -78,7 +78,7 @@ $("#nav-button-container > li").on("click", function () {
 $("#name").on("click", function () {
   $(".container").removeClass("active");
   $("#nav-button-container > li").removeClass("active");
-  $("#logo-image").addClass("active");
+  $("#home-container").addClass("active");
   $(this).addClass("active");
   resetViewers();
 });
@@ -87,7 +87,7 @@ $("#name").on("click", function () {
 $("#portfolio-title").on("click", function () {
     $(".container").removeClass("active");
     $("#nav-button-container > li").removeClass("active");
-    $("#logo-image").addClass("active");
+    $("#home-container").addClass("active");
     $("#name").addClass("active");
     resetViewers();
   });
