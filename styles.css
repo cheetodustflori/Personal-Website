@@ -9,10 +9,10 @@ body {
 
 header{
     display: flex;
-    justify-content: center; /* Center content horizontally */
+    justify-content: center; 
     align-items: center;
     margin: 15px;
-    position: relative; /* Allows absolute positioning of the title */
+    position: relative; 
     height: 60px;
 }
 
@@ -27,19 +27,25 @@ header{
 
 #name:hover,
 #name.active{
-    background-color: #7796CB;
+    /* background-color: #7796CB;
     color: white;
-    border-radius: 40px;
+    border-radius: 40px; */
 }
 
 #portfolio-title{
     font-weight: bold;
-    font-size: 35px;
-    color: #23395B;
+    text-decoration: underline;
+    font-size: 50px;
+    color: black;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     cursor: pointer;
+}
+
+#portfolio-title:hover,
+#name:hover{
+    filter:opacity(65%);
 }
 
 .header-link{
@@ -48,6 +54,33 @@ header{
     display: flex;
     gap: 10px; 
     font-weight: bold;
+}
+
+.linkedin-button > img {
+    width: 50px;
+}
+
+.github-button > img {
+    width: 50px;
+}
+
+.header-right{
+    position: absolute;
+    right: 0; 
+    display: flex;
+    font-weight: bold;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-hours > p{
+    margin: 0;
+    padding: 0;
+}
+
+#cloud {
+    height: 50px;
+    margin-right: 15px;
 }
 
 .link{
@@ -62,6 +95,8 @@ header{
     color: burlywood;
 }
 
+/* ----- MIDDLE ------ */
+
 #home-container{
     display: none;
 }
@@ -73,8 +108,6 @@ header{
     justify-content: center;
     align-items: center;
 }
-
-
 
 #projects-container,
 #activities-container,
@@ -154,6 +187,8 @@ header{
 
 .list {
     margin-top: 100px;
+    position: absolute;
+    left: 25px;
 }
 
 .list > li {
@@ -177,6 +212,9 @@ header{
     margin: 15px;
     display: flex;
     flex-direction: column;
+    left: 50%;
+    transform: translateX(-50%);
+    position: absolute;
 }
 
 .projects-viewer-headline,
@@ -198,6 +236,7 @@ header{
 }
 
 .viewer-display {
+    
     border: 3px solid black;
     margin: 0 auto;
     height: 300px;
@@ -226,10 +265,28 @@ header{
 }
 
 .viewer-description{
+    position: absolute;
+    top: 25%;
+    right: 25px;
     align-content: center;
     overflow-wrap: break-word;
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 350px;
+    max-width: 350px;
     padding: 0;
 }
 
+
+/* --- COMIC DRAWING ----- */
+
+#return-home {
+    display: flex;
+    justify-content: center;
+}
+
+#return-home > a {
+    color: black;
+}
+
+#return-home > a:hover{
+    filter: opacity(65%);
+}

@@ -17,7 +17,7 @@ var projects = [
     details: "swift | xcode",
     images:
       '<video class="viewer-video" src="assets/travel.mov" controls autoplay loop muted></video>',
-    description: 'i taught a group of students how to make an app with swift and xcode in weekly meetings! this travel bucket list app offers users a tracking tool for destinations they\'d like to visit, details for these places, and ways to categorize them by types of trips (e.x. vacation, road trip, etc.). i was inspired by the tutorial by <a href="https://www.youtube.com/watch?v=uSanD_pFwis target="_blank">designCode</a>',
+    description: 'i taught a group of students how to make an app with swift and xcode in weekly meetings! this travel bucket list app offers users a tracking tool for destinations they\'d like to visit, details for these places, and ways to categorize them by types of trips (e.x. vacation, road trip, etc.). i was inspired by the tutorial by <a href="https://www.youtube.com/watch?v=uSanD_pFwis target="_blank" style="text-decoration: none; color: #7796CB">designCode</a>',
   },
   {
     name: "uic course planner",
@@ -40,41 +40,48 @@ var projects = [
 
 var experiences = [
   {
-    position: "web development ra",
+    position: "web dev research assistant",
     date: "june 24 - now",
+    github: "https://github.com/cheetodustflori/UIC-Course-Planner",
     embed:
       '<iframe src="https://docs.google.com/presentation/d/1Sa9GjBIq1oHeTT5ptnoDPSZZTWrLatbZ6ITDGAZCJ8s/embed?start=false&loop=true&delayms=3000" frameborder="0" width="504" height="313" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>',
+      description: 'i redesigned the interface of a teacher authoring tool to make it easy for users to navigate, give the application a more sleek look, and add more functions that would assist teachers with organizing their comments. i created a sorting mechanism where teachers can count and filter comments by category (clicking on a line bar) and emotions (clicking on emotions panel). I also added color coding and emojis to help teachers easily differentiate comment categories and emotions.',
   },
   {
     position: "ui design intern",
     date: "may 24",
     embed:
       '<video class="viewer-video" src="assets/survey.mp4" controls autoplay loop muted></video>',
+      description: 'i created a mock-up of a survey collection app which would be presented to patients in rural healthcare clinics. these surveys aim to provide a sense of comfort to new patients and give the clinic a better sense of how to serve the rural community. i led the design and ideation of the prototype, including the use of 3D icons, color palette, minimal and sleek look, and general flow of the survey.',
   },
 ];
 
 var activities = [
     {
         activity: 'leaf',
-        position:'',
+        position:'front end developer',
+        date: 'aug 23 - now',
         description: '',
         images:'',
     },
     {
         activity: 'acm',
-        position:'',
+        position:'treasurer',
+        date: 'may 24 - now',
         description: '',
         images:'',
     },
     {
         activity: 'wics',
-        position:'',
+        position:'dev lead',
+        date: 'may 24 - now',
         description: '',
         images:'',
     },
     {
         activity: 'sparkhacks',
-        position:'',
+        position:'web developer',
+        date: 'sep 24',
         description: '',
         images:'',
     },
@@ -97,58 +104,77 @@ $("#nav-button-container > li").on("click", function () {
   resetViewers();
 });
 
-function resetToDefault() {
-  $(".container").removeClass("active");
-  $(".viewer-description").empty();
-  $("#nav-button-container > li").removeClass("active");
-  $("#home-container").addClass("active");
-  $("#name").addClass("active");
-  resetViewers();
-}
+
 
 $("#name").on("click", resetToDefault);
 $("#portfolio-title").on("click", resetToDefault);
 
-// changing projects viewer based on list item
-$("#projects-container > .list > li").on("click", function () {
-  $(".projects-viewer-headline").empty();
-  $(".viewer-display").empty();
-  $(".viewer-description").empty();
-  $(".list > li").removeClass("active");
-  $(this).addClass("active");
-  var index = $(this).index();
-  $(".projects-viewer-headline").append(
-    "<p>" +
-      projects[index].date +
-      "</p><b>" +
-      projects[index].type +
-      '</b><a href="' +
-      projects[index].github +
-      '" target="_blank" class="link"> github</a>'
-  );
-  $(".viewer-display").append(projects[index].images);
-  $(".viewer-description").append(projects[index].description);
-});
+function updateViewer(containerSelector, dataList) {
+    $(containerSelector + " > .list > li").on("click", function () {
+        var viewerPrefix = containerSelector.replace("#", "").replace("-container", "-viewer");
+  
+      $("." + viewerPrefix + "-headline").empty();
+      $(".viewer-display").empty();
+      $(".viewer-description").empty();
+      $(".viewer-details").empty();
+      $(containerSelector + " .list > li").removeClass("active");
+      $(this).addClass("active");
+  
+      var index = $(this).index();
+  
+      if (dataList === projects) {
+        $("." + viewerPrefix + "-headline").append(
+          "<p>" +
+            dataList[index].date +
+            "</p><b>" +
+            dataList[index].type +
+            '</b><a href="' +
+            dataList[index].github +
+            '" target="_blank" class="github-button"><img src="assets/github.png"></a>'
+        );
+        $(".viewer-display").append(dataList[index].images);
+      } else if (dataList === experiences) {
+        $("." + viewerPrefix + "-headline").append(
+          '<p style="font-weight:bold; text-decoration: underline;">' +
+            dataList[index].position +
+            "</p><p>" +
+            dataList[index].date
+        );
+        if(index == 0){
+             $("." + viewerPrefix + "-headline").append("</p>" + '<a target="_blank" href="'+ dataList[index].github +'" class="github-button"><img src="assets/github.png"></a>');
+        }
+        $(".viewer-display").append(dataList[index].embed);
+      } else if (dataList === activities) {
+        $("." + viewerPrefix + "-headline").append(
+            "<b style='text-decoration:underline'>" +
+              dataList[index].position +
+              "</b><p>" +
+              dataList[index].date +
+              '</p>'
+          );
+      }
+  
+      $(".viewer-description").append(dataList[index].description);
+      $(".viewer-details").append(dataList[index].details || "");
+    });
+  }
+  
+  // Example usage:
+  updateViewer("#projects-container", projects);
+  updateViewer("#experience-container", experiences);
+  updateViewer("#activities-container", activities);
 
-// changing experience viewer based on list item
-$("#experience-container > .list > li").on("click", function () {
-  $(".experience-viewer-headline").empty();
-  $(".viewer-display").empty();
-  $(".viewer-description").empty();
-  $(".list > li").removeClass("active");
-  $(this).addClass("active");
-  var index = $(this).index();
-  $(".experience-viewer-headline").append(
-    '<p style="font-weight:bold; text-decoration: underline;">' +
-      experiences[index].position +
-      "</p><p>" +
-      experiences[index].date +
-      "</p>"
-  );
-  $(".viewer-display").append(experiences[index].embed);
-  $(".viewer-description").append(experiences[index].description);
-});
+// --------- FUNCTIONS ----------
 
+// reset containers
+function resetToDefault() {
+    $(".container").removeClass("active");
+    $(".viewer-description").empty();
+    $("#nav-button-container > li").removeClass("active");
+    $("#home-container").addClass("active");
+    $("#name").addClass("active");
+    resetViewers();
+  }
 
 // reset all viewer headlines
 function resetViewers() {
@@ -156,9 +182,9 @@ function resetViewers() {
   $(".projects-viewer-headline").empty();
   $(".experience-viewer-headline").empty();
   $(".activities-viewer-headline").empty();
-  $(".projects-viewer-headline").append("<p>projects</p>");
-  $(".experience-viewer-headline").append("<p>experience</p>");
-  $(".activities-viewer-headline").append("<p>experience</p>");
+  $(".projects-viewer-headline").append("<p> ... </p>");
+  $(".experience-viewer-headline").append("<p> ... </p>");
+  $(".activities-viewer-headline").append("<p> ... </p>");
 }
 
 // changing activities viewer based on list item
