@@ -17,7 +17,8 @@ var projects = [
     details: "swift | xcode",
     images:
       '<video class="viewer-video" src="assets/travel.mov" controls autoplay loop muted></video>',
-    description: 'i taught a group of students how to make an app with swift and xcode in weekly meetings! this travel bucket list app offers users a tracking tool for destinations they\'d like to visit, details for these places, and ways to categorize them by types of trips (e.x. vacation, road trip, etc.). i was inspired by the tutorial by <a href="https://www.youtube.com/watch?v=uSanD_pFwis target="_blank" style="text-decoration: none; color: #7796CB">designCode</a>',
+    description:
+      'i taught a group of students how to make an app with swift and xcode in weekly meetings! this travel bucket list app offers users a tracking tool for destinations they\'d like to visit, details for these places, and ways to categorize them by types of trips (e.x. vacation, road trip, etc.). i was inspired by the tutorial by <a href="https://www.youtube.com/watch?v=uSanD_pFwis target="_blank" style="text-decoration: none; color: #7796CB">designCode</a>',
   },
   {
     name: "uic course planner",
@@ -26,7 +27,8 @@ var projects = [
     github: "https://github.com/cheetodustflori/UIC-Course-Planner",
     details: "react.js | node.js | html | css | js",
     images: "<p>...results coming out soon...</p>",
-    description: "this upcoming semester, i will be leading a group of 10-15 students to build a website to help the cs community at uic plan out their undergrad courses for each semester. this website will feature a catalog of courses with descriptions and topics, and a planner where they can add courses to each semester and print their final plan.",
+    description:
+      "this upcoming semester, i will be leading a group of 10-15 students to build a website to help the cs community at uic plan out their undergrad courses for each semester. this website will feature a catalog of courses with descriptions and topics, and a planner where they can add courses to each semester and print their final plan.",
   },
   // {
   //     name: 'university projects',
@@ -45,47 +47,65 @@ var experiences = [
     github: "https://github.com/cheetodustflori/UIC-Course-Planner",
     embed:
       '<iframe src="https://docs.google.com/presentation/d/1Sa9GjBIq1oHeTT5ptnoDPSZZTWrLatbZ6ITDGAZCJ8s/embed?start=false&loop=true&delayms=3000" frameborder="0" width="504" height="313" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>',
-      description: 'i redesigned the interface of a teacher authoring tool to make it easy for users to navigate, give the application a more sleek look, and add more functions that would assist teachers with organizing their comments. i created a sorting mechanism where teachers can count and filter comments by category (clicking on a line bar) and emotions (clicking on emotions panel). I also added color coding and emojis to help teachers easily differentiate comment categories and emotions.',
+    description:
+      "i redesigned the interface of a teacher authoring tool to make it easy for users to navigate, give the application a more sleek look, and add more functions that would assist teachers with organizing their comments. i created a sorting mechanism where teachers can count and filter comments by category (clicking on a line bar) and emotions (clicking on emotions panel). I also added color coding and emojis to help teachers easily differentiate comment categories and emotions.",
   },
   {
     position: "ui design intern",
     date: "may 24",
     embed:
-      '<video class="viewer-video" src="assets/survey.mp4" controls autoplay loop muted></video>',
-      description: 'i created a mock-up of a survey collection app which would be presented to patients in rural healthcare clinics. these surveys aim to provide a sense of comfort to new patients and give the clinic a better sense of how to serve the rural community. i led the design and ideation of the prototype, including the use of 3D icons, color palette, minimal and sleek look, and general flow of the survey.',
+      '<video class="viewer-video" src="assets/survey.mp4" controls loop muted></video>',
+    description:
+      "i created a mock-up of a survey collection app which would be presented to patients in rural healthcare clinics. these surveys aim to provide a sense of comfort to new patients and give the clinic a better sense of how to serve the rural community. i led the design and ideation of the prototype, including the use of 3D icons, color palette, minimal and sleek look, and general flow of the survey.",
   },
 ];
 
 var activities = [
-    {
-        activity: 'leaf',
-        position:'front end developer',
-        date: 'aug 23 - now',
-        description: '',
-        images:'',
-    },
-    {
-        activity: 'acm',
-        position:'treasurer',
-        date: 'may 24 - now',
-        description: '',
-        images:'',
-    },
-    {
-        activity: 'wics',
-        position:'dev lead',
-        date: 'may 24 - now',
-        description: '',
-        images:'',
-    },
-    {
-        activity: 'sparkhacks',
-        position:'web developer',
-        date: 'sep 24',
-        description: '',
-        images:'',
-    },
-]
+  {
+    activity: "leaf",
+    position: "front end developer",
+    date: "aug 23 - now",
+    description:
+      "<ul><li>led swift developer team</li><li>designed and built mobile ios app </li><li>organized fundraisers and financial literacy workshops</li></ul>",
+    images: [
+      "assets/activities/leaf",
+      "assets/activities/leaf2",
+      "assets/activities/leaf3",
+      "assets/activities/leaf4",
+      "assets/activities/leaf5",
+      "assets/activities/leaf6",
+      "assets/activities/leaf7",
+    ],
+  },
+  {
+    activity: "acm",
+    position: "treasurer",
+    date: "may 24 - now",
+    description:
+      "<ul><li>host technical workshops in web design</li><li>organize weekly cs workshops and fun events</li><li>manage funds</li></ul>",
+    images: [
+      "assets/activities/acm",
+      "assets/activities/acm3",
+      "assets/activities/acm4",
+    ],
+  },
+  {
+    activity: "wics",
+    position: "dev lead",
+    date: "may 24 - now",
+    description:
+      "<ul><li>teaching group of cs students how to build a website</li><li>host technical workshops in web design</li><li>organize weekly cs workshops and fun events</li></ul>",
+    images: ["assets/activities/wics", "assets/activities/wics2"],
+  },
+  {
+    activity: "sparkhacks",
+    position: "web developer",
+    date: "sep 24",
+    description:
+      "<ul><li>building website for uic's annual hackathon</li></ul>",
+    images: "",
+  },
+];
 
 // changing pages based on button click
 $("#nav-button-container > li").on("click", function () {
@@ -104,77 +124,96 @@ $("#nav-button-container > li").on("click", function () {
   resetViewers();
 });
 
-
-
 $("#name").on("click", resetToDefault);
 $("#portfolio-title").on("click", resetToDefault);
 
 function updateViewer(containerSelector, dataList) {
-    $(containerSelector + " > .list > li").on("click", function () {
-        var viewerPrefix = containerSelector.replace("#", "").replace("-container", "-viewer");
-  
-      $("." + viewerPrefix + "-headline").empty();
-      $(".viewer-display").empty();
-      $(".viewer-description").empty();
-      $(".viewer-details").empty();
-      $(containerSelector + " .list > li").removeClass("active");
-      $(this).addClass("active");
-  
-      var index = $(this).index();
-  
-      if (dataList === projects) {
+  $(containerSelector + " > .list > li").on("click", function () {
+    var viewerPrefix = containerSelector
+      .replace("#", "")
+      .replace("-container", "-viewer");
+
+    $("." + viewerPrefix + "-headline").empty();
+    $(".viewer-display").empty();
+    $(".viewer-description").empty();
+    $(".viewer-details").empty();
+    $(containerSelector + " .list > li").removeClass("active");
+    $(this).addClass("active");
+
+    var index = $(this).index();
+
+    if (dataList === projects) {
+      $("." + viewerPrefix + "-headline").append(
+        "<p>" +
+          dataList[index].date +
+          "</p><b>" +
+          dataList[index].type +
+          '</b><a href="' +
+          dataList[index].github +
+          '" target="_blank" class="github-button"><img src="assets/github.png"></a>'
+      );
+      $(".viewer-display").append(dataList[index].images);
+    } else if (dataList === experiences) {
+      $("." + viewerPrefix + "-headline").append(
+        '<p style="font-weight:bold; text-decoration: underline;">' +
+          dataList[index].position +
+          "</p><p>" +
+          dataList[index].date
+      );
+      if (index == 0) {
         $("." + viewerPrefix + "-headline").append(
-          "<p>" +
-            dataList[index].date +
-            "</p><b>" +
-            dataList[index].type +
-            '</b><a href="' +
+          "</p>" +
+            '<a target="_blank" href="' +
             dataList[index].github +
-            '" target="_blank" class="github-button"><img src="assets/github.png"></a>'
+            '" class="github-button"><img src="assets/github.png"></a>'
         );
-        $(".viewer-display").append(dataList[index].images);
-      } else if (dataList === experiences) {
-        $("." + viewerPrefix + "-headline").append(
-          '<p style="font-weight:bold; text-decoration: underline;">' +
-            dataList[index].position +
-            "</p><p>" +
-            dataList[index].date
-        );
-        if(index == 0){
-             $("." + viewerPrefix + "-headline").append("</p>" + '<a target="_blank" href="'+ dataList[index].github +'" class="github-button"><img src="assets/github.png"></a>');
-        }
-        $(".viewer-display").append(dataList[index].embed);
-      } else if (dataList === activities) {
-        $("." + viewerPrefix + "-headline").append(
-            "<b style='text-decoration:underline'>" +
-              dataList[index].position +
-              "</b><p>" +
-              dataList[index].date +
-              '</p>'
-          );
       }
-  
-      $(".viewer-description").append(dataList[index].description);
-      $(".viewer-details").append(dataList[index].details || "");
-    });
-  }
-  
-  // Example usage:
-  updateViewer("#projects-container", projects);
-  updateViewer("#experience-container", experiences);
-  updateViewer("#activities-container", activities);
+      $(".viewer-display").append(dataList[index].embed);
+    } else if (dataList === activities) {
+      $("." + viewerPrefix + "-headline").append(
+        "<b style='text-decoration:underline'>" +
+          dataList[index].position +
+          "</b><p>" +
+          dataList[index].date +
+          "</p>"
+      );
+      // activities.forEach(function (activity) {
+      //   if (activity.images && activity.images.length > 0) {
+      //     activity.images.forEach(function (image) {
+      //       $(".viewer-display").append(
+      //         '<div class="mySlides fade"><img src=' +
+      //           image +
+      //           ' style="width:100%"></div>'
+      //       );
+      //     });
+      //   }
+      // });
+      $(".viewer-display").append(
+        '<a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a>'
+      );
+    }
+
+    $(".viewer-description").append(dataList[index].description);
+    $(".viewer-details").append(dataList[index].details || "");
+  });
+}
+
+// Example usage:
+updateViewer("#projects-container", projects);
+updateViewer("#experience-container", experiences);
+updateViewer("#activities-container", activities);
 
 // --------- FUNCTIONS ----------
 
 // reset containers
 function resetToDefault() {
-    $(".container").removeClass("active");
-    $(".viewer-description").empty();
-    $("#nav-button-container > li").removeClass("active");
-    $("#home-container").addClass("active");
-    $("#name").addClass("active");
-    resetViewers();
-  }
+  $(".container").removeClass("active");
+  $(".viewer-description").empty();
+  $("#nav-button-container > li").removeClass("active");
+  $("#home-container").addClass("active");
+  $("#name").addClass("active");
+  resetViewers();
+}
 
 // reset all viewer headlines
 function resetViewers() {
@@ -188,3 +227,36 @@ function resetViewers() {
 }
 
 // changing activities viewer based on list item
+
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides((slideIndex += n));
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides((slideIndex = n));
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {
+    slideIndex = 1;
+  }
+  if (n < 1) {
+    slideIndex = slides.length;
+  }
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex - 1].style.display = "block";
+  dots[slideIndex - 1].className += " active";
+}
