@@ -1,3 +1,4 @@
+var slideIndex = 1;
 var projects = [
   {
     name: "the leaf project",
@@ -68,13 +69,12 @@ var activities = [
     description:
       "<ul><li>led swift developer team</li><li>designed and built mobile ios app </li><li>organized fundraisers and financial literacy workshops</li></ul>",
     images: [
-      "assets/activities/leaf",
-      "assets/activities/leaf2",
-      "assets/activities/leaf3",
-      "assets/activities/leaf4",
-      "assets/activities/leaf5",
-      "assets/activities/leaf6",
-      "assets/activities/leaf7",
+      "assets/activities/leaf.png",
+      "assets/activities/leaf2.jpg",
+      "assets/activities/leaf4.png",
+      "assets/activities/leaf5.png",
+      "assets/activities/leaf6.png",
+      "assets/activities/leaf7.jpg",
     ],
   },
   {
@@ -84,9 +84,10 @@ var activities = [
     description:
       "<ul><li>host technical workshops in web design</li><li>organize weekly cs workshops and fun events</li><li>manage funds</li></ul>",
     images: [
-      "assets/activities/acm",
-      "assets/activities/acm3",
-      "assets/activities/acm4",
+      "assets/activities/acm.jpg",
+      "assets/activities/acm2.jpg",
+      "assets/activities/acm3.jpg",
+      "assets/activities/acm4.jpg",
     ],
   },
   {
@@ -95,7 +96,7 @@ var activities = [
     date: "may 24 - now",
     description:
       "<ul><li>teaching group of cs students how to build a website</li><li>host technical workshops in web design</li><li>organize weekly cs workshops and fun events</li></ul>",
-    images: ["assets/activities/wics", "assets/activities/wics2"],
+    images: ["assets/activities/wics.jpg", "assets/activities/wics2.jpg"],
   },
   {
     activity: "sparkhacks",
@@ -103,9 +104,11 @@ var activities = [
     date: "sep 24",
     description:
       "<ul><li>building website for uic's annual hackathon</li></ul>",
-    images: "",
+    images: ["assets/activities/sparkhacks.png"],
   },
 ];
+
+
 
 // changing pages based on button click
 $("#nav-button-container > li").on("click", function () {
@@ -177,20 +180,25 @@ function updateViewer(containerSelector, dataList) {
           dataList[index].date +
           "</p>"
       );
-      // activities.forEach(function (activity) {
-      //   if (activity.images && activity.images.length > 0) {
-      //     activity.images.forEach(function (image) {
-      //       $(".viewer-display").append(
-      //         '<div class="mySlides fade"><img src=' +
-      //           image +
-      //           ' style="width:100%"></div>'
-      //       );
-      //     });
-      //   }
-      // });
-      $(".viewer-display").append(
-        '<a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a>'
+
+      if (activities[index].images && activities[index].images.length > 0) {
+        activities[index].images.forEach(function (image) {
+          
+          $("#activities-container .viewer-display").append(
+            '<div class="mySlides"><img src="' +
+              image +
+              '" style="width:100%"></div>'
+          );
+        });
+      }
+
+      $("#activities-container .viewer-display").append(
+        '<div id="arrow-container"><a class="prev" onclick="plusSlides(-1)">&#10094;</a><a class="next" onclick="plusSlides(1)">&#10095;</a></div>'
       );
+
+      slideIndex = 1;
+      showSlides(slideIndex);
+      
     }
 
     $(".viewer-description").append(dataList[index].description);
@@ -226,37 +234,20 @@ function resetViewers() {
   $(".activities-viewer-headline").append("<p> ... </p>");
 }
 
-// changing activities viewer based on list item
-
-let slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides((slideIndex += n));
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides((slideIndex = n));
+function plusSlides(n){
+  showSlides(slideIndex += n);
 }
 
 function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
+  let slides = $("#activities-container .mySlides");
   if (n > slides.length) {
     slideIndex = 1;
   }
   if (n < 1) {
     slideIndex = slides.length;
   }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " active";
+  slides.each(function (index) {
+    $(this).css("display", "none");
+  });
+  slides.eq(slideIndex - 1).css("display", "flex");
 }
