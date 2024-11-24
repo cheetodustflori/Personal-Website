@@ -27,9 +27,9 @@ var projects = [
     type: "react / web dev",
     github: "https://github.com/cheetodustflori/UIC-Course-Planner",
     details: "react.js | node.js | html | css | js",
-    images: "<p>...results coming out soon...</p>",
+    images: '<img class="viewer-image" src="assets/courseplanner.png">',
     description:
-      "this upcoming semester, i will be leading a group of 10-15 students to build a website to help the cs community at uic plan out their undergrad courses for each semester. this website will feature a catalog of courses with descriptions and topics, and a planner where they can add courses to each semester and print their final plan.",
+      "leading a group of 15 students to build a website to help uic community prepare for their cs courses for each semester. this website features a catalog of courses with descriptions and topics, and student reviews of course difficulty and enjoyment.",
   },
   // {
   //     name: 'university projects',

@@ -47,6 +47,7 @@ header {
 #portfolio-title:hover,
 #name:hover {
   filter: opacity(65%);
+  color:#7796cb;
 }
 
 .header-link {
@@ -238,8 +239,9 @@ header {
 .viewer-display {
   border: 3px solid black;
   margin: 0 auto;
-  height: 300px;
-  width: 500px;
+  margin-top: -30px;
+  height: 400px;
+  width: 600px;
   overflow: hidden;
   background-color: white;
   display: flex;
@@ -248,7 +250,7 @@ header {
 }
 
 .viewer-image {
-  max-width: 500px;
+  max-width: 600px;
   padding: 5px 0 5px;
 }
 
