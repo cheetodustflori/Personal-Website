@@ -1,8 +1,28 @@
 var slideIndex = 1;
 var projects = [
   {
+    name: "wics website",
+    date: "jan 25 - now",
+    type: "web dev",
+    github: "https://github.com/wics-uic/WiCS-Website",
+    details: "astro | tailwind | html | css | js",
+    images: '<img class="viewer-image" src="assets/wicsweb.png">',
+    description:
+      "i'm leading a group of 15 students to build the official website for the women in computer science organization. this is a full-stack project that will go through the entirety of the spring 2025 semester.",
+  },
+  {
+    name: "uic course planner",
+    date: "sept 2024 - dec 2024",
+    type: "react / web dev",
+    github: "https://github.com/cheetodustflori/UIC-Course-Planner",
+    details: "react.js | node.js | html | css | js",
+    images: '<img class="viewer-image" src="assets/courseplanner.png">',
+    description:
+      "leading a group of 15 students to build a website to help uic community prepare for their cs courses for each semester. this website features a catalog of courses with descriptions and topics, and student reviews of course difficulty and enjoyment.",
+  },
+  {
     name: "the leaf project",
-    date: "aug 23 - now",
+    date: "aug 2023 - aug 2024",
     type: "mobile ios dev",
     github: "https://github.com/cheetodustflori/The-Leaf-Project",
     details: "swift | xcode",
@@ -10,6 +30,7 @@ var projects = [
     description:
       "this was my first project entering college! leaf club is dedicated to increasing financial literacy through the development of an app which teaches users basic finance lessons. since the team decided to break off and transition to xcode, i volunteered to learn swift and rebuild the app from scratch in my first semester. i finished designing and building 80% of the app's basic pages with added elements(i.e. completed task counters).",
   },
+  
   {
     name: "travel bucket list",
     date: "jan 24",
@@ -21,16 +42,7 @@ var projects = [
     description:
       'i taught a group of students how to make an app with swift and xcode in weekly meetings! this travel bucket list app offers users a tracking tool for destinations they\'d like to visit, details for these places, and ways to categorize them by types of trips (e.x. vacation, road trip, etc.). i was inspired by the tutorial by <a href="https://www.youtube.com/watch?v=uSanD_pFwis target="_blank" style="text-decoration: none; color: #7796CB">designCode</a>',
   },
-  {
-    name: "uic course planner",
-    date: "sept 24 - now",
-    type: "react / web dev",
-    github: "https://github.com/cheetodustflori/UIC-Course-Planner",
-    details: "react.js | node.js | html | css | js",
-    images: '<img class="viewer-image" src="assets/courseplanner.png">',
-    description:
-      "leading a group of 15 students to build a website to help uic community prepare for their cs courses for each semester. this website features a catalog of courses with descriptions and topics, and student reviews of course difficulty and enjoyment.",
-  },
+  
   // {
   //     name: 'university projects',
   //     date: 'aug 23 - may 24',
@@ -101,9 +113,9 @@ var activities = [
   {
     activity: "sparkhacks",
     position: "web developer",
-    date: "sep 24",
+    date: "sep 24 - jan 24",
     description:
-      "<ul><li>building website for uic's annual hackathon</li></ul>",
+      "<ul><li>built <a target='_blank' href='https://www.sparkhacks.org/'>website</a> for uic's annual hackathon for students to register and receive updates about the 2-day event</li><li>developed using html, css, tailwind, and astro</li></ul>",
     images: ["assets/activities/sparkhacks.png"],
   },
 ];

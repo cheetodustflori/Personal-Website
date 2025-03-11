@@ -25,13 +25,13 @@ header {
   color: black;
   cursor: pointer;
 }
-
+/* 
 #name:hover,
 #name.active {
-  /* background-color: #7796CB;
+  background-color: #7796CB;
     color: white;
-    border-radius: 40px; */
-}
+    border-radius: 40px; 
+} */
 
 #portfolio-title {
   font-weight: bold;
